@@ -1,7 +1,6 @@
 Day 56: LZW
 <br>
-Lempel–Ziv–Welch (LZW) https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch is a universal lossless data compression algorithm created by Abraham Lempel, Jacob Ziv, and Terry Welch. It was published by Welch in 1984 as an improved implementation of the LZ78 algorithm published by Lempel and Ziv in 1978. The algorithm is simple to implement and has the potential for very high throughput in hardware implementations.[1] It is the algorithm of the widely used Unix file compression utility compress and is used in the GIF image format.
-
+[Lempel–Ziv–Welch (LZW)](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) is a universal lossless data compression algorithm created by Abraham Lempel, Jacob Ziv, and Terry Welch. It was published by Welch in 1984 as an improved implementation of the LZ78 algorithm published by Lempel and Ziv in 1978. The algorithm is simple to implement and has the potential for very high throughput in hardware implementations.[1] It is the algorithm of the widely used Unix file compression utility compress and is used in the GIF image format.
 <br>
 LZW iteratively builds a (code, word) dictionary as it reads input data. At the beginning, the whole alphabet is inserted and hence needs not to be stored to output.
 <br>
@@ -15,6 +14,7 @@ That empowers its weakness — the dictionary is built very slowly. Once it 
 <br>
 run:
 ```
+
 fn main() {
     let mut lzw = LZW::new();
     let text = "BABAABAAA";
